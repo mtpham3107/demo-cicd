@@ -4,7 +4,7 @@
      stages {
         stage('Build') {
             steps {
-                bat 'dotnet --version'
+                echo 'make build'
             }
         }
         stage('Test') {
