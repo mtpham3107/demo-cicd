@@ -1,10 +1,6 @@
 ﻿pipeline {
     agent any
 
-    // environment {
-    //     BUILD_CONFIGURATION = "Release"
-    // }
-
     stages {
         stage('Build') {
             steps {
