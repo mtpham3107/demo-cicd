@@ -1,7 +1,7 @@
 ﻿pipeline {
     agent any
 
-     stages {
+    stages {
         stage('Build') {
             steps {
                 // Example build step, replace with your actual build command
@@ -22,7 +22,7 @@
         }
     }
 
-     post {
+    post {
         always {
             cleanWs()
         }
