@@ -1,15 +1,14 @@
 ﻿pipeline {
     agent any
 
-    environment {
-            BUILD_CONFIGURATION = "Release"
-     }
+    // environment {
+    //     BUILD_CONFIGURATION = "Release"
+    // }
 
-     stages {
+    stages {
         stage('Build') {
             steps {
-                echo 'make build'  
-                //sh "dotnet build -c ${BUILD_CONFIGURATION}"
+                echo 'make build'
             }
         }
         stage('Test') {
@@ -24,7 +23,7 @@
         }
     }
 
-     post {
+    post {
         always {
             cleanWs()
         }
