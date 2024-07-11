@@ -2,12 +2,6 @@ pipeline {
     agent any
 
      stages {
-        stage('Checkout') {
-            steps {
-                // Checkout the source code
-                git 'https://github.com/your-repo.git'
-            }
-        }
         stage('Build') {
             steps {
                 // Example build step, replace with your actual build command
