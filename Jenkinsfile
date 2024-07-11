@@ -1,11 +1,13 @@
 pipeline {
     agent any
 
+    environment {
+            BUILD_CONFIGURATION = "Release"
+     }
+
      stages {
         stage('Build') {
-            steps {
-                echo 'make build'
-            }
+            sh "dotnet build -c ${BUILD_CONFIGURATION}"
         }
         stage('Test') {
             steps {
