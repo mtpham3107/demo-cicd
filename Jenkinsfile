@@ -1,4 +1,4 @@
-pipeline {
+﻿pipeline {
     agent any
 
     environment {
@@ -9,8 +9,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'make build'
-                sh 'dotnet --version'
-                //sh "dotnet build -c ${BUILD_CONFIGURATION}"
+               script {
+                    // Kiểm tra phiên bản .NET SDK
+                    bat 'dotnet --version'
+                }
+                bat "dotnet build -c ${BUILD_CONFIGURATION}"
             }
         }
         stage('Test') {
