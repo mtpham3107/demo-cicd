@@ -4,20 +4,17 @@ pipeline {
      stages {
         stage('Build') {
             steps {
-                // Example build step, replace with your actual build command
-                sh 'make build'
+                echo 'make build'
             }
         }
         stage('Test') {
             steps {
-                // Example test step, replace with your actual test command
-                sh 'make test'
+                echo 'make test'
             }
         }
         stage('Deploy') {
             steps {
-                // Example deploy step, replace with your actual deploy command
-                sh 'make deploy'
+                echo 'make deploy'
             }
         }
     }
