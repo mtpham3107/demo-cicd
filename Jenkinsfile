@@ -7,7 +7,9 @@ pipeline {
 
      stages {
         stage('Build') {
-            sh "dotnet build -c ${BUILD_CONFIGURATION}"
+            steps {
+                sh "dotnet build -c ${BUILD_CONFIGURATION}"
+            }
         }
         stage('Test') {
             steps {
