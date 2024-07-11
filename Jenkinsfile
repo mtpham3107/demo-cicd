@@ -8,12 +8,8 @@
      stages {
         stage('Build') {
             steps {
-                echo 'make build'
-               script {
-                    // Kiểm tra phiên bản .NET SDK
-                    bat 'dotnet --version'
-                }
-                bat "dotnet build -c ${BUILD_CONFIGURATION}"
+                echo 'make build'  
+                //sh "dotnet build -c ${BUILD_CONFIGURATION}"
             }
         }
         stage('Test') {
