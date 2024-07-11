@@ -8,7 +8,12 @@ pipeline {
      stages {
         stage('Build') {
             steps {
-                sh "dotnet build -c ${BUILD_CONFIGURATION}"
+                echo 'make build'
+                script {
+                    // Ensure dotnet command is available and print the .NET SDK version
+                    sh 'dotnet --version'
+                }
+                //sh "dotnet build -c ${BUILD_CONFIGURATION}"
             }
         }
         stage('Test') {
