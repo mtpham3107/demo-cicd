@@ -1,25 +1,28 @@
 ﻿pipeline {
     agent any
 
-    stages {
+     stages {
         stage('Build') {
             steps {
-                echo 'make build'
+                // Example build step, replace with your actual build command
+                sh 'make build'
             }
         }
         stage('Test') {
             steps {
-                echo 'make test'
+                // Example test step, replace with your actual test command
+                sh 'make test'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'make deploy'
+                // Example deploy step, replace with your actual deploy command
+                sh 'make deploy'
             }
         }
     }
 
-    post {
+     post {
         always {
             cleanWs()
         }
